@@ -1,0 +1,42 @@
+@use "reset";
+@use "cards";
+@use "fonts";
+@use "mixin";
+
+body {
+    background-color: #FAFAFA;
+}
+
+h2 {
+    font-family: fonts.$title-font;
+    font-size: 3rem;
+    line-height: 105%;
+}
+
+p,
+a {
+    font-family: fonts.$paragraph-font;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a {
+    font-size: 1.8rem;
+    display: inline-block;
+    font-weight: bold;
+    @include mixin.media(800px) {
+        font-size: 1.4rem;
+        padding: .5rem 1rem;
+    }
+}
+
+.container {
+    width: min(90%, 77rem);
+    margin: auto;
+}
+
+.spacing>*+* {
+    margin-top: 2rem;
+}

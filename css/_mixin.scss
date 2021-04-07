@@ -1,0 +1,22 @@
+@mixin card-gradient($colorlight, $colordark) {
+    background: radial-gradient(50% 50% at 50% 50%, $colorlight 0%, $colordark 100%);
+}
+
+@mixin card-btn($color, $background-color, $shadow-color, $hover-color) {
+    color: $color;
+    background-color: $background-color;
+    padding: 1rem 2rem;
+    border-radius: .3em;
+    box-shadow: 0px 4px 4px $shadow-color;
+    
+    &:hover{
+        transition: .2s;
+        background-color: $hover-color;
+    }
+}
+
+@mixin media($breakpoint) {
+    @media(min-width: $breakpoint) {
+        @content
+    }
+}

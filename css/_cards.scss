@@ -1,0 +1,76 @@
+@use "colors";
+@use "fonts";
+@use "mixin";
+
+.lista__item {
+    display: block;
+    padding: 5rem;
+    border-radius: 1em;
+    margin: 10rem 0;
+
+    img {
+        margin-top: -10rem;
+        width: 100%;
+    }
+
+    @include mixin.media(800px) {
+        padding: 2em 3em;
+        img {
+            width: 72%;
+            margin-top: 5rem;
+            shape-outside: circle(50%)
+        }
+    }
+}
+
+.lista__item.ferrari {
+    
+    @include mixin.card-gradient(colors.$light-red, colors.$dark-red);
+    
+    h2 {
+        color: map-get(colors.$font-color-red, "title")
+    }
+    
+    p {
+        color: map-get(colors.$font-color-red, "paragraph")
+    }
+    
+    a {
+        @include mixin.card-btn(map-get(colors.$font-color-red, "title"), colors.$red-button, #A03942, #863037);
+    }
+    
+    @include mixin.media(800px) {
+        
+        .lista__content {
+            text-align: right
+        }
+        
+        img {
+            float: left;
+        }
+    }
+}
+
+    .lista__item.mustang {
+    
+        @include mixin.card-gradient(colors.$light-black, colors.$dark-black);
+    
+        h2 {
+            color: map-get(colors.$font-color-black, "title")
+        }
+    
+        p {
+            color: map-get(colors.$font-color-black, "paragraph")
+        }
+    
+        a {
+            @include mixin.card-btn(map-get(colors.$font-color-black, "title"), colors.$black-button, #1F211F,#303330);
+
+        }
+    
+        @include mixin.media(800px) {
+            img {
+                float: right;
+            }
+    }
+}

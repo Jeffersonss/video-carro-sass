@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.lista__item {
+  display: block;
+  padding: 5rem;
+  border-radius: 1em;
+  margin: 10rem 0;
+}
+.lista__item img {
+  margin-top: -10rem;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .lista__item {
+    padding: 2em 3em;
+  }
+  .lista__item img {
+    width: 72%;
+    margin-top: 5rem;
+    shape-outside: circle(50%);
+  }
+}
+
+.lista__item.ferrari {
+  background: radial-gradient(50% 50% at 50% 50%, #DC6771 0%, #A8444D 100%);
+}
+.lista__item.ferrari h2 {
+  color: #FFEEF0;
+}
+.lista__item.ferrari p {
+  color: #FFEEEF;
+}
+.lista__item.ferrari a {
+  color: #FFEEF0;
+  background-color: rgba(101, 32, 39, 0.36);
+  padding: 1rem 2rem;
+  border-radius: 0.3em;
+  box-shadow: 0px 4px 4px #A03942;
+}
+.lista__item.ferrari a:hover {
+  transition: 0.2s;
+  background-color: #863037;
+}
+@media (min-width: 800px) {
+  .lista__item.ferrari .lista__content {
+    text-align: right;
+  }
+  .lista__item.ferrari img {
+    float: left;
+  }
+}
+
+.lista__item.mustang {
+  background: radial-gradient(50% 50% at 50% 50%, #393938 0%, #272926 100%);
+}
+.lista__item.mustang h2 {
+  color: #EBEBEB;
+}
+.lista__item.mustang p {
+  color: rgba(235, 235, 235, 0.84);
+}
+.lista__item.mustang a {
+  color: #EBEBEB;
+  background-color: #3F3F3F;
+  padding: 1rem 2rem;
+  border-radius: 0.3em;
+  box-shadow: 0px 4px 4px #1F211F;
+}
+.lista__item.mustang a:hover {
+  transition: 0.2s;
+  background-color: #303330;
+}
+@media (min-width: 800px) {
+  .lista__item.mustang img {
+    float: right;
+  }
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+h2 {
+  font-family: "Saira", sans-serif;
+  font-size: 3rem;
+  line-height: 105%;
+}
+
+p,
+a {
+  font-family: "Montserrat", serif;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  font-size: 1.8rem;
+  display: inline-block;
+  font-weight: bold;
+}
+@media (min-width: 800px) {
+  a {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.container {
+  width: min(90%, 77rem);
+  margin: auto;
+}
+
+.spacing > * + * {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
